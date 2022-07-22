@@ -64,7 +64,7 @@ int T(int n, int m, std::list<int>* A, std::list<int>* B){
             (*B).insert(leftEndpointB, *leftEndpointB);
             puts("extend B");
         }
-        int leftmost_sum = leftEndpointA + leftEndpointB;
+        int leftmost_sum = *leftEndpointA + *leftEndpointB;
         if (leftmost_sum > memo[n][m])
             memo[n][m] = leftmost_sum;
         return memo[n][m];
